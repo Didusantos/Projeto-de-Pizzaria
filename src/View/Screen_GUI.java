@@ -39,11 +39,13 @@ public class Screen_GUI extends javax.swing.JFrame {
         Pedidos_Jpanel = new javax.swing.JPanel();
         labelHeader1 = new org.edisoncor.gui.label.LabelHeader();
         labelTask1 = new org.edisoncor.gui.label.LabelTask();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         numCliente_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+<<<<<<< HEAD
         nomePedido_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
         Acompanhamentos = new org.edisoncor.gui.comboBox.ComboBoxRect();
         Meia1_cb = new org.edisoncor.gui.comboBox.ComboBoxRect();
         Meia2_cb = new org.edisoncor.gui.comboBox.ComboBoxRect();
@@ -54,12 +56,16 @@ public class Screen_GUI extends javax.swing.JFrame {
         Princ_options = new org.edisoncor.gui.comboBox.ComboBoxRect();
         qtdPizzas_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
         jLabel8 = new javax.swing.JLabel();
+<<<<<<< HEAD
         Marca_txt1 = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
         Sair1 = new javax.swing.JButton();
         Entregas_Jpanel = new javax.swing.JPanel();
         labelHeader2 = new org.edisoncor.gui.label.LabelHeader();
         labelTask2 = new org.edisoncor.gui.label.LabelTask();
         jLabel6 = new javax.swing.JLabel();
+<<<<<<< HEAD
         jLabel7 = new javax.swing.JLabel();
         Pedidos = new org.edisoncor.gui.comboBox.ComboBoxRect();
         Entregador_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
@@ -86,6 +92,11 @@ public class Screen_GUI extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         Pizza = new javax.swing.JMenuItem();
         acompanhamento = new javax.swing.JMenuItem();
+=======
+        Pedidos = new org.edisoncor.gui.comboBox.ComboBoxRect();
+        gerarpdf_btn = new org.edisoncor.gui.button.ButtonAction();
+        Sair = new javax.swing.JButton();
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -104,11 +115,14 @@ public class Screen_GUI extends javax.swing.JFrame {
         labelTask1.setDescription("Selecione e faça os pedidos");
         Pedidos_Jpanel.add(labelTask1);
         labelTask1.setBounds(1, 24, 458, 64);
+<<<<<<< HEAD
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel1.setText("Nome do pedido:");
         Pedidos_Jpanel.add(jLabel1);
         jLabel1.setBounds(40, 340, 94, 30);
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setText("Quantidade de pizzas:");
@@ -125,6 +139,7 @@ public class Screen_GUI extends javax.swing.JFrame {
         Pedidos_Jpanel.add(numCliente_txt);
         numCliente_txt.setBounds(139, 214, 191, 30);
 
+<<<<<<< HEAD
         nomePedido_txt.setDescripcion("Identificador do produto");
         nomePedido_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         nomePedido_txt.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +156,14 @@ public class Screen_GUI extends javax.swing.JFrame {
                 AcompanhamentosActionPerformed(evt);
             }
         });
+=======
+        Acompanhamentos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Refrigerante", "Salgado", "Doce", "Nenhum" }));
+        Acompanhamentos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AcompanhamentosActionPerformed(evt);
+            }
+        });
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
         Pedidos_Jpanel.add(Acompanhamentos);
         Acompanhamentos.setBounds(390, 190, 109, 20);
 
@@ -157,7 +180,14 @@ public class Screen_GUI extends javax.swing.JFrame {
         Pedidos_Jpanel.add(jLabel4);
         jLabel4.setBounds(98, 262, 37, 30);
 
+<<<<<<< HEAD
         Preco_txt.setDescripcion("Digite o preço aqui");
+=======
+        Preco_txt.setBackground(new java.awt.Color(153, 153, 153));
+        Preco_txt.setForeground(new java.awt.Color(255, 255, 255));
+        Preco_txt.setDescripcion("O preço aparecerá aqui");
+        Preco_txt.setEnabled(false);
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
         Preco_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         Preco_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,6 +237,7 @@ public class Screen_GUI extends javax.swing.JFrame {
         Pedidos_Jpanel.add(jLabel8);
         jLabel8.setBounds(390, 150, 180, 30);
 
+<<<<<<< HEAD
         Marca_txt1.setDescripcion("Nome do produto");
         Marca_txt1.setEnabled(false);
         Marca_txt1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -218,6 +249,8 @@ public class Screen_GUI extends javax.swing.JFrame {
         Pedidos_Jpanel.add(Marca_txt1);
         Marca_txt1.setBounds(390, 220, 190, 30);
 
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
         Sair1.setBackground(new java.awt.Color(255, 0, 0));
         Sair1.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         Sair1.setForeground(new java.awt.Color(255, 255, 255));
@@ -250,6 +283,7 @@ public class Screen_GUI extends javax.swing.JFrame {
         jLabel6.setText("Escolha um pedido:");
         Entregas_Jpanel.add(jLabel6);
         jLabel6.setBounds(27, 121, 113, 24);
+<<<<<<< HEAD
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel7.setText("Digite o nome do entregador:");
@@ -323,6 +357,11 @@ public class Screen_GUI extends javax.swing.JFrame {
         Entregas_Jpanel.add(observacao_txt);
         observacao_txt.setBounds(500, 199, 215, 32);
 
+=======
+        Entregas_Jpanel.add(Pedidos);
+        Pedidos.setBounds(144, 123, 239, 20);
+
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
         gerarpdf_btn.setText("Gerar PDF");
         gerarpdf_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -332,6 +371,7 @@ public class Screen_GUI extends javax.swing.JFrame {
         Entregas_Jpanel.add(gerarpdf_btn);
         gerarpdf_btn.setBounds(500, 310, 153, 35);
 
+<<<<<<< HEAD
         jLabel15.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel15.setText("Nome do arquivo:");
         Entregas_Jpanel.add(jLabel15);
@@ -342,6 +382,8 @@ public class Screen_GUI extends javax.swing.JFrame {
         Entregas_Jpanel.add(nomeArquivo_txt);
         nomeArquivo_txt.setBounds(500, 242, 215, 32);
 
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
         Sair.setBackground(new java.awt.Color(255, 0, 0));
         Sair.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         Sair.setForeground(new java.awt.Color(255, 255, 255));
@@ -415,6 +457,7 @@ public class Screen_GUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void nomePedido_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomePedido_txtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomePedido_txtActionPerformed
@@ -425,6 +468,14 @@ public class Screen_GUI extends javax.swing.JFrame {
 
     private void send_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_send_btnActionPerformed
         Model.Functions_DAO.pedido();
+=======
+    private void AcompanhamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AcompanhamentosActionPerformed
+       
+    }//GEN-LAST:event_AcompanhamentosActionPerformed
+
+    private void send_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_send_btnActionPerformed
+        
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
     }//GEN-LAST:event_send_btnActionPerformed
 
     private void Princ_optionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Princ_optionsActionPerformed
@@ -435,6 +486,7 @@ public class Screen_GUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_qtdPizzas_txtActionPerformed
 
+<<<<<<< HEAD
     private void Marca_txt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Marca_txt1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Marca_txt1ActionPerformed
@@ -443,18 +495,24 @@ public class Screen_GUI extends javax.swing.JFrame {
         Model.Functions_DAO.pdf();
     }//GEN-LAST:event_gerarpdf_btnActionPerformed
 
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
     private void Preco_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Preco_txtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Preco_txtActionPerformed
 
+<<<<<<< HEAD
     private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
         System.exit(0);
     }//GEN-LAST:event_SairActionPerformed
 
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
     private void Sair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_Sair1ActionPerformed
 
+<<<<<<< HEAD
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu1ActionPerformed
@@ -474,6 +532,15 @@ public class Screen_GUI extends javax.swing.JFrame {
     private void notepadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notepadActionPerformed
         Model.Functions_DAO.notepad();
     }//GEN-LAST:event_notepadActionPerformed
+=======
+    private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_SairActionPerformed
+
+    private void gerarpdf_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerarpdf_btnActionPerformed
+        Model.Functions_DAO.pdf();
+    }//GEN-LAST:event_gerarpdf_btnActionPerformed
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
 
     /**
      * @param args the command line arguments
@@ -513,8 +580,11 @@ public class Screen_GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static org.edisoncor.gui.comboBox.ComboBoxRect Acompanhamentos;
+<<<<<<< HEAD
     public static org.edisoncor.gui.textField.TextFieldRoundBackground Cliente_txt;
     public static org.edisoncor.gui.textField.TextFieldRoundBackground Entregador_txt;
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
     private javax.swing.JPanel Entregas_Jpanel;
     public static org.edisoncor.gui.textField.TextFieldRoundBackground Estabelecimento_txt;
     public static org.edisoncor.gui.textField.TextFieldRoundBackground Horario_tx;
@@ -522,15 +592,21 @@ public class Screen_GUI extends javax.swing.JFrame {
     public static org.edisoncor.gui.textField.TextFieldRoundBackground Marca_txt1;
     public static org.edisoncor.gui.comboBox.ComboBoxRect Meia1_cb;
     public static org.edisoncor.gui.comboBox.ComboBoxRect Meia2_cb;
+<<<<<<< HEAD
     public static org.edisoncor.gui.textField.TextFieldRoundBackground Operador_txt;
     public static org.edisoncor.gui.comboBox.ComboBoxRect Pedidos;
     private javax.swing.JPanel Pedidos_Jpanel;
     private javax.swing.JMenuItem Pizza;
+=======
+    private org.edisoncor.gui.comboBox.ComboBoxRect Pedidos;
+    private javax.swing.JPanel Pedidos_Jpanel;
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
     public static org.edisoncor.gui.textField.TextFieldRoundBackground Preco_txt;
     private javax.swing.JTabbedPane Princ_Panel;
     public static org.edisoncor.gui.comboBox.ComboBoxRect Princ_options;
     private javax.swing.JButton Sair;
     private javax.swing.JButton Sair1;
+<<<<<<< HEAD
     private javax.swing.JMenuItem acompanhamento;
     private javax.swing.JMenuItem calc;
     private javax.swing.JMenuBar calc_menu;
@@ -542,25 +618,36 @@ public class Screen_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+=======
+    private org.edisoncor.gui.button.ButtonAction gerarpdf_btn;
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+=======
+    private javax.swing.JLabel jLabel8;
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
     private org.edisoncor.gui.label.LabelHeader labelHeader1;
     private org.edisoncor.gui.label.LabelHeader labelHeader2;
     private org.edisoncor.gui.label.LabelTask labelTask1;
     private org.edisoncor.gui.label.LabelTask labelTask2;
+<<<<<<< HEAD
     public static org.edisoncor.gui.textField.TextFieldRoundBackground nomeArquivo_txt;
     public static org.edisoncor.gui.textField.TextFieldRoundBackground nomePedido_txt;
     private javax.swing.JMenuItem notepad;
     public static org.edisoncor.gui.textField.TextFieldRoundBackground numCliente_txt;
     public static org.edisoncor.gui.textField.TextFieldRoundBackground observacao_txt;
+=======
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground numCliente_txt;
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
     public static org.edisoncor.gui.textField.TextFieldRoundBackground qtdPizzas_txt;
     private org.edisoncor.gui.button.ButtonAction send_btn;
     // End of variables declaration//GEN-END:variables

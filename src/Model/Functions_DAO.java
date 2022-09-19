@@ -12,8 +12,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.Font.FontFamily;
+<<<<<<< HEAD
 import java.util.logging.Level;
 import java.util.logging.Logger;
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
 public class Functions_DAO {
     
     public static final Font texto =
@@ -37,14 +40,22 @@ public class Functions_DAO {
         
         
         try{
+<<<<<<< HEAD
             PdfWriter.getInstance(documentopdf, new FileOutputStream("C:\\Users\\edu\\Desktop\\"+View.Screen_GUI.nomeArquivo_txt.getText()+".pdf"));
             
             documentopdf.open();
             Paragraph preface = new Paragraph(View.Screen_GUI.nomeArquivo_txt.getText(), titulo); 
+=======
+            PdfWriter.getInstance(documentopdf, new FileOutputStream("C:\\Users\\edu\\Desktop\\trabalho.pdf"));
+            
+            documentopdf.open();
+            Paragraph preface = new Paragraph("Titulo",titulo); 
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
             preface.setAlignment(Element.ALIGN_CENTER);
             documentopdf.add(preface);
             documentopdf.setPageSize(PageSize.A4);
             documentopdf.add(new Paragraph(" "));
+<<<<<<< HEAD
             documentopdf.add(new Paragraph("Está entrega foi feitas às "+(View.Screen_GUI.Horario_tx.getText()), texto));
             documentopdf.add(new Paragraph(" "));
             documentopdf.add(new Paragraph("Nome do cliente: "+(View.Screen_GUI.Cliente_txt).getText(), texto));
@@ -73,6 +84,31 @@ public class Functions_DAO {
             documentopdf.add(new Paragraph("Estabelecimento: "+(View.Screen_GUI.Estabelecimento_txt).getText(), texto));
             documentopdf.add(new Paragraph(" "));
             documentopdf.add(new Paragraph("Operador: "+(View.Screen_GUI.Operador_txt).getText(), texto));
+=======
+            documentopdf.add(new Paragraph("Está entrega foi feitas às "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Nome do cliente: "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Número do cliente: "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Local de entrega: "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Observação: "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Pedido: Pizza "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Observação: "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Acompanhamento: "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Valor pago: "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Entregue por: "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Estabelecimento: "));
+            documentopdf.add(new Paragraph(" "));
+            documentopdf.add(new Paragraph("Operador: "));
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
             documentopdf.add(new Paragraph(" "));
             
         }catch(DocumentException de){
@@ -83,6 +119,7 @@ public class Functions_DAO {
             documentopdf.close();
         }    
     }
+<<<<<<< HEAD
     public static void acompanhamentos(String acomp){
         if(acomp.equals("Nenhum")){
          View.Screen_GUI.Marca_txt1.setVisible(true);
@@ -121,5 +158,7 @@ public class Functions_DAO {
     public static void acompanhamento(String acomp){
         View.Screen_GUI.Acompanhamentos.addItem(acomp);
     }
+=======
+>>>>>>> 075c93e63e3ff506c91de95c3f9c8be17e1427ee
 }
 
