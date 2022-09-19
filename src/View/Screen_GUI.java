@@ -5,6 +5,11 @@
  */
 package View;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author edu
@@ -18,6 +23,7 @@ public class Screen_GUI extends javax.swing.JFrame {
         initComponents();
         Meia1_cb.setVisible(false);
         Meia2_cb.setVisible(false);
+        Marca_txt1.setVisible(false);
     }
 
     /**
@@ -31,51 +37,151 @@ public class Screen_GUI extends javax.swing.JFrame {
 
         Princ_Panel = new javax.swing.JTabbedPane();
         Pedidos_Jpanel = new javax.swing.JPanel();
-        Send_btn = new javax.swing.JButton();
         labelHeader1 = new org.edisoncor.gui.label.LabelHeader();
         labelTask1 = new org.edisoncor.gui.label.LabelTask();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        textFieldRoundBackground1 = new org.edisoncor.gui.textField.TextFieldRoundBackground();
-        textFieldRoundBackground2 = new org.edisoncor.gui.textField.TextFieldRoundBackground();
-        Princ_options = new org.edisoncor.gui.comboBox.ComboBoxRect();
+        numCliente_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        nomePedido_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        Acompanhamentos = new org.edisoncor.gui.comboBox.ComboBoxRect();
         Meia1_cb = new org.edisoncor.gui.comboBox.ComboBoxRect();
         Meia2_cb = new org.edisoncor.gui.comboBox.ComboBoxRect();
+        jLabel4 = new javax.swing.JLabel();
+        Preco_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        send_btn = new org.edisoncor.gui.button.ButtonAction();
+        jLabel5 = new javax.swing.JLabel();
+        Princ_options = new org.edisoncor.gui.comboBox.ComboBoxRect();
+        qtdPizzas_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        jLabel8 = new javax.swing.JLabel();
+        Marca_txt1 = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        Sair1 = new javax.swing.JButton();
         Entregas_Jpanel = new javax.swing.JPanel();
+        labelHeader2 = new org.edisoncor.gui.label.LabelHeader();
+        labelTask2 = new org.edisoncor.gui.label.LabelTask();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        Pedidos = new org.edisoncor.gui.comboBox.ComboBoxRect();
+        Entregador_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        jLabel9 = new javax.swing.JLabel();
+        Operador_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        jLabel10 = new javax.swing.JLabel();
+        Estabelecimento_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        jLabel11 = new javax.swing.JLabel();
+        Cliente_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        jLabel12 = new javax.swing.JLabel();
+        Local_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        jLabel13 = new javax.swing.JLabel();
+        Horario_tx = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        jLabel14 = new javax.swing.JLabel();
+        observacao_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        gerarpdf_btn = new org.edisoncor.gui.button.ButtonAction();
+        jLabel15 = new javax.swing.JLabel();
+        nomeArquivo_txt = new org.edisoncor.gui.textField.TextFieldRoundBackground();
+        Sair = new javax.swing.JButton();
+        calc_menu = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        calc = new javax.swing.JMenuItem();
+        notepad = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        Pizza = new javax.swing.JMenuItem();
+        acompanhamento = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(null);
 
+        Pedidos_Jpanel.setBackground(new java.awt.Color(255, 255, 255));
         Pedidos_Jpanel.setBorder(new org.edisoncor.gui.util.DropShadowBorder());
-
-        Send_btn.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        Send_btn.setText("Finalizar Pedido");
+        Pedidos_Jpanel.setLayout(null);
 
         labelHeader1.setText("Organizar Pedidos");
+        Pedidos_Jpanel.add(labelHeader1);
+        labelHeader1.setBounds(1, 1, 753, 17);
 
         labelTask1.setText("Gerencie e Realize os pedidos de clientes");
         labelTask1.setToolTipText("");
         labelTask1.setDescription("Selecione e faça os pedidos");
+        Pedidos_Jpanel.add(labelTask1);
+        labelTask1.setBounds(1, 24, 458, 64);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel1.setText("Selecione a pizza:");
+        jLabel1.setText("Nome do pedido:");
+        Pedidos_Jpanel.add(jLabel1);
+        jLabel1.setBounds(40, 340, 94, 30);
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setText("Quantidade de pizzas:");
+        Pedidos_Jpanel.add(jLabel2);
+        jLabel2.setBounds(11, 155, 124, 30);
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel3.setText("Número do cliente:");
+        Pedidos_Jpanel.add(jLabel3);
+        jLabel3.setBounds(29, 213, 106, 30);
 
-        textFieldRoundBackground1.setDescripcion("(DDD) 12345-7890");
+        numCliente_txt.setDescripcion("(DDD) 12345-7890");
+        numCliente_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Pedidos_Jpanel.add(numCliente_txt);
+        numCliente_txt.setBounds(139, 214, 191, 30);
 
-        textFieldRoundBackground2.setDescripcion("__________________________");
-        textFieldRoundBackground2.addActionListener(new java.awt.event.ActionListener() {
+        nomePedido_txt.setDescripcion("Identificador do produto");
+        nomePedido_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        nomePedido_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldRoundBackground2ActionPerformed(evt);
+                nomePedido_txtActionPerformed(evt);
             }
         });
+        Pedidos_Jpanel.add(nomePedido_txt);
+        nomePedido_txt.setBounds(140, 340, 190, 30);
+
+        Acompanhamentos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum", "Refrigerante", "Salgado", "Doce" }));
+        Acompanhamentos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AcompanhamentosActionPerformed(evt);
+            }
+        });
+        Pedidos_Jpanel.add(Acompanhamentos);
+        Acompanhamentos.setBounds(390, 190, 109, 20);
+
+        Meia1_cb.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mussarela", "Queijo", "Bacon", "Portuguesa" }));
+        Pedidos_Jpanel.add(Meia1_cb);
+        Meia1_cb.setBounds(231, 104, 109, 20);
+
+        Meia2_cb.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mussarela", "Queijo", "Bacon", "Portuguesa" }));
+        Pedidos_Jpanel.add(Meia2_cb);
+        Meia2_cb.setBounds(346, 104, 109, 20);
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setText("Preço:");
+        Pedidos_Jpanel.add(jLabel4);
+        jLabel4.setBounds(98, 262, 37, 30);
+
+        Preco_txt.setDescripcion("Digite o preço aqui");
+        Preco_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Preco_txt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Preco_txtActionPerformed(evt);
+            }
+        });
+        Pedidos_Jpanel.add(Preco_txt);
+        Preco_txt.setBounds(139, 263, 191, 30);
+
+        send_btn.setBackground(new java.awt.Color(255, 255, 255));
+        send_btn.setText("Enviar pedido");
+        send_btn.setColorDeSombra(new java.awt.Color(255, 255, 255));
+        send_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                send_btnActionPerformed(evt);
+            }
+        });
+        Pedidos_Jpanel.add(send_btn);
+        send_btn.setBounds(520, 330, 153, 35);
+
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel5.setText("Selecione a pizza:");
+        Pedidos_Jpanel.add(jLabel5);
+        jLabel5.setBounds(11, 99, 101, 30);
 
         Princ_options.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mussarela", "Queijo", "Bacon", "Portuguesa", "Meia-Meia" }));
         Princ_options.addActionListener(new java.awt.event.ActionListener() {
@@ -83,101 +189,291 @@ public class Screen_GUI extends javax.swing.JFrame {
                 Princ_optionsActionPerformed(evt);
             }
         });
+        Pedidos_Jpanel.add(Princ_options);
+        Princ_options.setBounds(116, 104, 109, 20);
 
-        Meia1_cb.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mussarela", "Queijo", "Bacon", "Portuguesa" }));
+        qtdPizzas_txt.setDescripcion("__________________________");
+        qtdPizzas_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        qtdPizzas_txt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                qtdPizzas_txtActionPerformed(evt);
+            }
+        });
+        Pedidos_Jpanel.add(qtdPizzas_txt);
+        qtdPizzas_txt.setBounds(139, 156, 190, 30);
 
-        Meia2_cb.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mussarela", "Queijo", "Bacon", "Portuguesa" }));
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel8.setText("Selecione o acompanhamento:");
+        Pedidos_Jpanel.add(jLabel8);
+        jLabel8.setBounds(390, 150, 180, 30);
 
-        javax.swing.GroupLayout Pedidos_JpanelLayout = new javax.swing.GroupLayout(Pedidos_Jpanel);
-        Pedidos_Jpanel.setLayout(Pedidos_JpanelLayout);
-        Pedidos_JpanelLayout.setHorizontalGroup(
-            Pedidos_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Pedidos_JpanelLayout.createSequentialGroup()
-                .addGroup(Pedidos_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelHeader1, javax.swing.GroupLayout.PREFERRED_SIZE, 753, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelTask1, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(Pedidos_JpanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Pedidos_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Pedidos_JpanelLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textFieldRoundBackground1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Pedidos_JpanelLayout.createSequentialGroup()
-                        .addGroup(Pedidos_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Pedidos_JpanelLayout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textFieldRoundBackground2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Pedidos_JpanelLayout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Princ_options, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Meia1_cb, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Meia2_cb, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Pedidos_JpanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Send_btn)
-                .addGap(55, 55, 55))
-        );
-        Pedidos_JpanelLayout.setVerticalGroup(
-            Pedidos_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Pedidos_JpanelLayout.createSequentialGroup()
-                .addComponent(labelHeader1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelTask1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(Pedidos_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Princ_options, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Meia1_cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Meia2_cb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(Pedidos_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldRoundBackground2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(Pedidos_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldRoundBackground1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                .addComponent(Send_btn)
-                .addGap(25, 25, 25))
-        );
+        Marca_txt1.setDescripcion("Nome do produto");
+        Marca_txt1.setEnabled(false);
+        Marca_txt1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Marca_txt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Marca_txt1ActionPerformed(evt);
+            }
+        });
+        Pedidos_Jpanel.add(Marca_txt1);
+        Marca_txt1.setBounds(390, 220, 190, 30);
+
+        Sair1.setBackground(new java.awt.Color(255, 0, 0));
+        Sair1.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        Sair1.setForeground(new java.awt.Color(255, 255, 255));
+        Sair1.setText("X");
+        Sair1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0)));
+        Sair1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Sair1ActionPerformed(evt);
+            }
+        });
+        Pedidos_Jpanel.add(Sair1);
+        Sair1.setBounds(660, 30, 54, 34);
 
         Princ_Panel.addTab("Pedido", Pedidos_Jpanel);
 
-        javax.swing.GroupLayout Entregas_JpanelLayout = new javax.swing.GroupLayout(Entregas_Jpanel);
-        Entregas_Jpanel.setLayout(Entregas_JpanelLayout);
-        Entregas_JpanelLayout.setHorizontalGroup(
-            Entregas_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 745, Short.MAX_VALUE)
-        );
-        Entregas_JpanelLayout.setVerticalGroup(
-            Entregas_JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 392, Short.MAX_VALUE)
-        );
+        Entregas_Jpanel.setBackground(new java.awt.Color(255, 255, 255));
+        Entregas_Jpanel.setBorder(new org.edisoncor.gui.util.DropShadowBorder());
+        Entregas_Jpanel.setLayout(null);
+
+        labelHeader2.setText("Orgnaizar entregas");
+        Entregas_Jpanel.add(labelHeader2);
+        labelHeader2.setBounds(1, 1, 738, 17);
+
+        labelTask2.setText("Finalize os pedidos e Realiza a entrega");
+        labelTask2.setDescription("Finalize as entregas e faça o comprovante");
+        Entregas_Jpanel.add(labelTask2);
+        labelTask2.setBounds(1, 24, 418, 64);
+
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel6.setText("Escolha um pedido:");
+        Entregas_Jpanel.add(jLabel6);
+        jLabel6.setBounds(27, 121, 113, 24);
+
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel7.setText("Digite o nome do entregador:");
+        Entregas_Jpanel.add(jLabel7);
+        jLabel7.setBounds(1, 159, 163, 24);
+        Entregas_Jpanel.add(Pedidos);
+        Pedidos.setBounds(144, 123, 239, 20);
+
+        Entregador_txt.setDescripcion("Identifique quem fará a entrega");
+        Entregador_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Entregas_Jpanel.add(Entregador_txt);
+        Entregador_txt.setBounds(168, 156, 215, 32);
+
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel9.setText("Nome do operador:");
+        Entregas_Jpanel.add(jLabel9);
+        jLabel9.setBounds(56, 202, 108, 24);
+
+        Operador_txt.setDescripcion("Quem está fazendo o pedido?");
+        Operador_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Entregas_Jpanel.add(Operador_txt);
+        Operador_txt.setBounds(168, 199, 215, 32);
+
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel10.setText("Nome de estabalecimento:");
+        Entregas_Jpanel.add(jLabel10);
+        jLabel10.setBounds(13, 245, 151, 24);
+
+        Estabelecimento_txt.setDescripcion("Nome do seu estabelecimento");
+        Estabelecimento_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Entregas_Jpanel.add(Estabelecimento_txt);
+        Estabelecimento_txt.setBounds(168, 242, 215, 32);
+
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel11.setText("Nome do cliente:");
+        Entregas_Jpanel.add(jLabel11);
+        jLabel11.setBounds(70, 288, 94, 24);
+
+        Cliente_txt.setDescripcion("Quem recebeu o produto?");
+        Cliente_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Entregas_Jpanel.add(Cliente_txt);
+        Cliente_txt.setBounds(168, 285, 215, 32);
+
+        jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel12.setText("Local da entrega:");
+        Entregas_Jpanel.add(jLabel12);
+        jLabel12.setBounds(66, 326, 98, 24);
+
+        Local_txt.setDescripcion("Onde o produto foi entregue");
+        Local_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Entregas_Jpanel.add(Local_txt);
+        Local_txt.setBounds(168, 323, 215, 32);
+
+        jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel13.setText("Horário de entrega:");
+        Entregas_Jpanel.add(jLabel13);
+        jLabel13.setBounds(387, 159, 109, 24);
+
+        Horario_tx.setDescripcion("Quando o produto foi entregue");
+        Horario_tx.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Entregas_Jpanel.add(Horario_tx);
+        Horario_tx.setBounds(500, 156, 215, 32);
+
+        jLabel14.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel14.setText("Observações:");
+        Entregas_Jpanel.add(jLabel14);
+        jLabel14.setBounds(417, 202, 79, 24);
+
+        observacao_txt.setDescripcion("Observações do cliente");
+        observacao_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Entregas_Jpanel.add(observacao_txt);
+        observacao_txt.setBounds(500, 199, 215, 32);
+
+        gerarpdf_btn.setText("Gerar PDF");
+        gerarpdf_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gerarpdf_btnActionPerformed(evt);
+            }
+        });
+        Entregas_Jpanel.add(gerarpdf_btn);
+        gerarpdf_btn.setBounds(500, 310, 153, 35);
+
+        jLabel15.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel15.setText("Nome do arquivo:");
+        Entregas_Jpanel.add(jLabel15);
+        jLabel15.setBounds(398, 245, 98, 24);
+
+        nomeArquivo_txt.setDescripcion("Nome do arquivo que será salvo");
+        nomeArquivo_txt.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Entregas_Jpanel.add(nomeArquivo_txt);
+        nomeArquivo_txt.setBounds(500, 242, 215, 32);
+
+        Sair.setBackground(new java.awt.Color(255, 0, 0));
+        Sair.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        Sair.setForeground(new java.awt.Color(255, 255, 255));
+        Sair.setText("X");
+        Sair.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 0, 0)));
+        Sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SairActionPerformed(evt);
+            }
+        });
+        Entregas_Jpanel.add(Sair);
+        Sair.setBounds(660, 30, 54, 34);
 
         Princ_Panel.addTab("Entregas", Entregas_Jpanel);
 
         getContentPane().add(Princ_Panel);
         Princ_Panel.setBounds(0, 0, 750, 420);
 
-        setSize(new java.awt.Dimension(745, 413));
+        jMenu1.setText("Aplicativos");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
+
+        calc.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        calc.setText("Calculadora");
+        calc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcActionPerformed(evt);
+            }
+        });
+        jMenu1.add(calc);
+
+        notepad.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        notepad.setText("Bloco de Notas");
+        notepad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                notepadActionPerformed(evt);
+            }
+        });
+        jMenu1.add(notepad);
+
+        calc_menu.add(jMenu1);
+
+        jMenu2.setText("Adicionar");
+
+        Pizza.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        Pizza.setText("Pizza");
+        Pizza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PizzaActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Pizza);
+
+        acompanhamento.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        acompanhamento.setText("Acompanhamento");
+        acompanhamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acompanhamentoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(acompanhamento);
+
+        calc_menu.add(jMenu2);
+
+        setJMenuBar(calc_menu);
+
+        setSize(new java.awt.Dimension(750, 443));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textFieldRoundBackground2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldRoundBackground2ActionPerformed
+    private void nomePedido_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomePedido_txtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldRoundBackground2ActionPerformed
+    }//GEN-LAST:event_nomePedido_txtActionPerformed
+
+    private void AcompanhamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AcompanhamentosActionPerformed
+        Model.Functions_DAO.acompanhamentos(Acompanhamentos.getSelectedItem().toString());
+    }//GEN-LAST:event_AcompanhamentosActionPerformed
+
+    private void send_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_send_btnActionPerformed
+        Model.Functions_DAO.pedido();
+    }//GEN-LAST:event_send_btnActionPerformed
 
     private void Princ_optionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Princ_optionsActionPerformed
         Model.Functions_DAO.meia(Princ_options.getSelectedItem().toString());
     }//GEN-LAST:event_Princ_optionsActionPerformed
+
+    private void qtdPizzas_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtdPizzas_txtActionPerformed
+
+    }//GEN-LAST:event_qtdPizzas_txtActionPerformed
+
+    private void Marca_txt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Marca_txt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Marca_txt1ActionPerformed
+
+    private void gerarpdf_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerarpdf_btnActionPerformed
+        Model.Functions_DAO.pdf();
+    }//GEN-LAST:event_gerarpdf_btnActionPerformed
+
+    private void Preco_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Preco_txtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Preco_txtActionPerformed
+
+    private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_SairActionPerformed
+
+    private void Sair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sair1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_Sair1ActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void calcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcActionPerformed
+        Model.Functions_DAO.calc();
+    }//GEN-LAST:event_calcActionPerformed
+
+    private void PizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PizzaActionPerformed
+        Model.Functions_DAO.pizza(JOptionPane.showInputDialog(null, "Digite o nome da pizza:"));
+    }//GEN-LAST:event_PizzaActionPerformed
+
+    private void acompanhamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acompanhamentoActionPerformed
+        Model.Functions_DAO.acompanhamento(JOptionPane.showInputDialog(null, "Digite o nome do acompanhamento:"));
+    }//GEN-LAST:event_acompanhamentoActionPerformed
+
+    private void notepadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notepadActionPerformed
+        Model.Functions_DAO.notepad();
+    }//GEN-LAST:event_notepadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,19 +512,56 @@ public class Screen_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static org.edisoncor.gui.comboBox.ComboBoxRect Acompanhamentos;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground Cliente_txt;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground Entregador_txt;
     private javax.swing.JPanel Entregas_Jpanel;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground Estabelecimento_txt;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground Horario_tx;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground Local_txt;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground Marca_txt1;
     public static org.edisoncor.gui.comboBox.ComboBoxRect Meia1_cb;
     public static org.edisoncor.gui.comboBox.ComboBoxRect Meia2_cb;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground Operador_txt;
+    public static org.edisoncor.gui.comboBox.ComboBoxRect Pedidos;
     private javax.swing.JPanel Pedidos_Jpanel;
+    private javax.swing.JMenuItem Pizza;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground Preco_txt;
     private javax.swing.JTabbedPane Princ_Panel;
     public static org.edisoncor.gui.comboBox.ComboBoxRect Princ_options;
-    private javax.swing.JButton Send_btn;
+    private javax.swing.JButton Sair;
+    private javax.swing.JButton Sair1;
+    private javax.swing.JMenuItem acompanhamento;
+    private javax.swing.JMenuItem calc;
+    private javax.swing.JMenuBar calc_menu;
+    private org.edisoncor.gui.button.ButtonAction gerarpdf_btn;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private org.edisoncor.gui.label.LabelHeader labelHeader1;
+    private org.edisoncor.gui.label.LabelHeader labelHeader2;
     private org.edisoncor.gui.label.LabelTask labelTask1;
-    private org.edisoncor.gui.textField.TextFieldRoundBackground textFieldRoundBackground1;
-    private org.edisoncor.gui.textField.TextFieldRoundBackground textFieldRoundBackground2;
+    private org.edisoncor.gui.label.LabelTask labelTask2;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground nomeArquivo_txt;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground nomePedido_txt;
+    private javax.swing.JMenuItem notepad;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground numCliente_txt;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground observacao_txt;
+    public static org.edisoncor.gui.textField.TextFieldRoundBackground qtdPizzas_txt;
+    private org.edisoncor.gui.button.ButtonAction send_btn;
     // End of variables declaration//GEN-END:variables
 }
